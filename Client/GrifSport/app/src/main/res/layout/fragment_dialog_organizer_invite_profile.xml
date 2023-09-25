@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DialogFragmentOrganizerInviteProfile">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="350dp"
+        android:minHeight="400dp"
+        android:layout_height="wrap_content">
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginStart="10dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="Приглашение участников"
+            android:id="@+id/titleApplication"
+            android:textColor="@color/purple_700"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/titleApplication"
+            android:id="@+id/searchEt"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:drawableStart="@drawable/ic_search"
+            android:layout_weight="1"
+            android:hint="Поиск человека по ФИО"
+            android:textColorHint="@color/grey"
+            android:padding="10dp"
+            android:fontFamily="serif"
+            android:textSize="16sp"
+            android:textColor="@color/grey"
+            />
+
+        <androidx.viewpager.widget.ViewPager
+            android:layout_below="@+id/searchEt"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="10dp"
+            android:background="@color/white"
+            android:id="@+id/viewPagerInvite"
+            android:layout_width="wrap_content"
+            android:layout_height="350dp"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+           >
+        </androidx.viewpager.widget.ViewPager>
+
+
+
+
+    </RelativeLayout>
+</FrameLayout>

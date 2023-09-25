@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DialogFragmentOrganizerApplyApplication">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:minHeight="400dp"
+        android:layout_height="wrap_content">
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginStart="10dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="Заявки на участие"
+            android:id="@+id/titleApplication"
+            android:textColor="@color/purple_700"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            />
+
+
+
+        <androidx.viewpager.widget.ViewPager
+            android:layout_below="@+id/titleApplication"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="10dp"
+            android:background="@color/white"
+            android:id="@+id/viewPagerApplication"
+            android:layout_width="wrap_content"
+            android:layout_height="350dp"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+           >
+        </androidx.viewpager.widget.ViewPager>
+
+
+
+
+    </RelativeLayout>
+</FrameLayout>

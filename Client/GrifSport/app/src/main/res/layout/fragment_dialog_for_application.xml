@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DialogFragmentForApplication">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:minHeight="400dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="Заявка на участие"
+            android:id="@+id/titleApplication"
+            android:textColor="@color/purple_700"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_marginTop="35dp"
+        android:layout_below="@+id/titleApplication"
+        android:text="Выберите вакансию"
+        android:id="@+id/textVacancy"/>
+
+    <Spinner
+        android:id="@+id/changeVacancy"
+        android:layout_below="@+id/textVacancy"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="0dp"
+        android:backgroundTint="@color/black"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="0dp"
+
+        ></Spinner>
+
+        <EditText
+            android:layout_below="@+id/changeVacancy"
+            android:id="@+id/descriptionTextApplication"
+            android:layout_width="match_parent"
+            android:minHeight="300dp"
+            android:layout_height="wrap_content"
+            android:hint="Опишите себя"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="10dp"
+            android:inputType="textCapSentences|textMultiLine"
+            android:singleLine="false"
+            android:text=""
+            android:background="@drawable/edittextstyle"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+
+            />
+
+
+            >
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/application_back"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:textSize="6sp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="10dp"
+            android:layout_alignLeft="@+id/descriptionTextApplication"
+            android:layout_below="@+id/descriptionTextApplication"
+            android:background="@drawable/mybutton"
+            android:text="Отмена" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/application_post"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:textSize="6sp"
+            android:layout_marginTop="15dp"
+            android:layout_alignRight="@+id/descriptionTextApplication"
+            android:layout_below="@+id/descriptionTextApplication"
+            android:background="@drawable/mybutton"
+            android:text="Подать заявку на участие" />
+
+    </RelativeLayout>
+</FrameLayout>

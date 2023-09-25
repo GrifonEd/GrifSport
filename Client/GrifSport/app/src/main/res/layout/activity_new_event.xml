@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewEventActivity"
+    android:background="#CDFAF3"
+    >
+
+    <RelativeLayout
+        android:id = "@+id/toolBarRl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:background="@drawable/shape_toolbar02"
+        tools:ignore="MissingConstraints">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/profileBtn"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_account_white"
+            >
+
+        </ImageButton>
+
+        <TextView
+            android:id="@+id/subTitleTv"
+            android:layout_centerVertical="true"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textStyle="bold"
+            android:textColor="@color/white"/>
+
+
+        <ImageButton
+            android:id="@+id/logOut"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_logout"
+            android:layout_marginEnd="20dp" />
+
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/nameEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_edittextnamenewevent"
+        android:drawableStart="@drawable/ic_person_new_event"
+        android:drawablePadding="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_below="@+id/toolBarRl"
+        android:hint="Название вашего мероприятия"
+        android:inputType="textPersonName|textCapWords"
+        android:padding="10dp"
+        android:textColorHint="@color/purple_700"
+        android:fontFamily="serif"
+        android:textColor="@color/purple_700"
+
+        android:textStyle="bold"
+        android:textSize="18sp" />
+
+    <ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/nameEt"
+    android:background="@android:color/transparent"
+    android:scrollbars="vertical"
+    android:layout_marginTop="10dp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/round_back_light_yellow_20"
+        android:gravity="center"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:id="@+id/linearNew"
+        >
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="50"
+
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                >
+            <TextView
+                android:id="@+id/textViewStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Дата начала мероприятия"
+                android:textColorHint="@color/purple_700"
+                android:fontFamily="serif"
+                android:textColor="@color/purple_700"
+
+                android:textStyle="bold"
+                android:textSize="14sp"
+
+                android:layout_marginTop="0dp"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"/>
+
+            <Button
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:id="@+id/datePickerButtonStart"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="01 Янв 2020"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                style="?android:spinnerStyle"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView"
+                android:layout_marginTop="10dp"
+                android:onClick="openDatePickerStart"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="50"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                >
+                <TextView
+                    android:id="@+id/textViewEnd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Дата окончания мероприятия"
+                    android:textColorHint="@color/purple_700"
+                    android:fontFamily="serif"
+                    android:textColor="@color/purple_700"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="0dp"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center" />
+
+                <Button
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:id="@+id/datePickerButtonEnd"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="01 Янв 2020"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    style="?android:spinnerStyle"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView"
+                    android:layout_marginTop="10dp"
+                    android:onClick="openDatePickerEnd"/>
+
+            </LinearLayout>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/textViewDeadline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Дата окончания подачи заявок"
+            android:textColorHint="@color/purple_700"
+            android:fontFamily="serif"
+            android:textColor="@color/purple_700"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+        <Button
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:id="@+id/datePickerButtonDeadline"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="01 Янв 2020"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            style="?android:spinnerStyle"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            android:layout_marginTop="0dp"
+            android:onClick="openDatePickerDeadline"/>
+
+        <Button
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:id="@+id/timePickerButtonDeadline"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Выберите время"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            style="?android:spinnerStyle"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            android:layout_marginTop="0dp"
+            android:onClick="openTimePickerDeadline"/>
+    </LinearLayout>
+        <EditText
+
+            android:id="@+id/descriptionText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Опишите свое мероприятие"
+            android:inputType="textCapSentences|textMultiLine"
+            android:singleLine="false"
+            android:text=""
+            android:padding="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/shape_edittextnewevent"
+            android:drawablePadding="10dp"
+            android:textColorHint="@color/purple_700"
+            android:fontFamily="serif"
+            android:textColor="@color/purple_700"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+
+            />
+
+        <EditText
+            android:id="@+id/scheduleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Расписание вашего мероприятия"
+            android:inputType="textCapSentences|textMultiLine"
+            android:singleLine="false"
+            android:text=""
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/shape_edittextnewevent"
+            android:padding="10dp"
+            android:textColorHint="@color/purple_700"
+            android:fontFamily="serif"
+            android:textColor="@color/purple_700"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+
+            />
+
+
+
+        <EditText
+            android:id="@+id/AdressText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Адрес проведения"
+            android:inputType="textCapSentences|textMultiLine"
+            android:singleLine="false"
+            android:text=""
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/shape_edittextnewevent"
+            android:padding="10dp"
+            android:textColorHint="@color/purple_700"
+            android:fontFamily="serif"
+            android:textColor="@color/purple_700"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            />
+
+        <EditText
+            android:id="@+id/ageText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Возраст участников"
+            android:inputType="textCapSentences|textMultiLine"
+            android:singleLine="false"
+            android:text=""
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/shape_edittextnewevent"
+            android:padding="10dp"
+            android:textColorHint="@color/purple_700"
+            android:fontFamily="serif"
+            android:textColor="@color/purple_700"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+
+            />
+        <Spinner
+            android:id="@+id/typeEvent"
+            android:layout_width="wrap_content"
+            android:minWidth="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/shape_spinner"
+            android:padding="10dp"
+            ></Spinner>
+        <Spinner
+            android:id="@+id/genderEvent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/shape_spinner"
+            android:padding="10dp"
+            android:minWidth="300dp"
+
+            ></Spinner>
+        <Spinner
+            android:id="@+id/cityEvent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/shape_spinner"
+            android:padding="10dp"
+            android:minWidth="300dp"
+
+            ></Spinner>
+        <Spinner
+            android:id="@+id/sportEvent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/shape_spinner"
+            android:padding="10dp"
+            android:minWidth="300dp"
+
+            ></Spinner>
+
+        <EditText
+            android:id="@+id/phone_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Контактный номер телефона"
+            android:inputType="number"
+            android:singleLine="false"
+            android:text=""
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/shape_edittextnewevent"
+            android:padding="10dp"
+            android:textColorHint="@color/purple_700"
+            android:fontFamily="serif"
+            android:textColor="@color/purple_700"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+
+            />
+
+
+
+        <EditText
+            android:id="@+id/imagePath"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Введите ссылку на картинку для вашего мероприятия"
+            android:singleLine="false"
+            android:text=""
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/shape_edittextnewevent"
+            android:padding="10dp"
+            android:textColorHint="@color/purple_700"
+            android:fontFamily="serif"
+            android:textColor="@color/purple_700"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            />
+
+        <!--<Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Select PDF"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#000"
+            android:textSize="25sp"
+            android:text="Below is URL to PDF"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#000"
+            android:textSize="25sp"
+            android:text="URL to PDF"/>
+            -->
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/saveBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/round_result_back_20"
+            android:text="Сохранить"
+            android:layout_below="@+id/linearNew"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            />
+
+    </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/participant"
+        android:title="Участник"
+        android:icon="@drawable/atlet"/>
+    <item
+        android:id="@+id/organizer"
+        android:title="Организатор"
+        android:icon="@drawable/organizer" />
+    <item
+        android:id="@+id/judge"
+        android:title="Судья"
+        android:icon="@drawable/judge" />
+    <item
+        android:id="@+id/viewer"
+        android:title="Зритель"
+        android:icon="@drawable/viewer1"/>
+
+    <item
+        android:id="@+id/worker"
+        android:title="Работник"
+        android:icon="@drawable/worker"/>
+
+
+</menu>

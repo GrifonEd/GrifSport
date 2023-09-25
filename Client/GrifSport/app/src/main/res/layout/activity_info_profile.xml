@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InfoProfileActivity"
+    android:background="#E8FFF5">
+
+
+    <RelativeLayout
+        android:id="@+id/toolBarRl"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/shape_toolbar01">
+
+        <ImageButton
+            android:id="@+id/backloginBtn"
+            android:src="@drawable/ic_arrow_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:layout_margin="10dp"
+            android:padding="5dp" />
+
+
+
+
+        <TextView
+            android:id="@+id/event_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="50dp"
+            android:text="Event_name"
+            android:textColor="@color/white"
+            android:fontFamily="monospace"
+            android:textSize="14sp"
+            android:layout_toRightOf="@+id/backloginBtn"/>
+        <TextView
+            android:id="@+id/EventDates"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/event_name"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="5dp"
+            android:text="Event_dates"
+            android:textColor="@color/white"
+            android:fontFamily="monospace"
+            android:textSize="12sp"/>
+        <TextView
+            android:id="@+id/EventAdress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/event_name"
+            android:layout_marginEnd="25dp"
+            android:layout_alignParentRight ="true"
+            android:layout_marginTop="5dp"
+            android:text="Event_address"
+            android:textColor="@color/white"
+            android:fontFamily="monospace"
+            android:textSize="12sp"/>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolBarRl"
+        android:layout_marginBottom="0dp"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            >
+
+            <ImageView
+                android:id="@+id/iconEvent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+
+              />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iconEvent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:layout_marginStart="15dp"
+        android:id="@+id/Event_Desciplines"
+        android:text="Event_Desciplines"
+        android:textColor="@color/black"
+        android:fontFamily="monospace"
+        android:textSize="15sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Event_Desciplines"
+
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="10dp"
+
+        android:id="@+id/event_groups"
+        android:text="Groups"
+        android:textColor="@color/black"
+        android:fontFamily="monospace"
+        android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/event_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/event_groups"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="10dp"
+                android:text="Event_Description"
+                android:textColor="@color/black"
+                android:fontFamily="monospace"
+                android:textSize="12sp"/>
+
+        </RelativeLayout>
+
+
+
+    </ScrollView>
+
+
+</RelativeLayout>

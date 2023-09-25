@@ -1,0 +1,11 @@
+package com.example.grifsport;
+
+import retrofit2.Call;
+import retrofit2.http.Body;
+import retrofit2.http.GET;
+import retrofit2.http.POST;
+
+public interface ViewerServicePost {
+    @POST(BuildConfig.MYURL+"/viewer/create")
+    Call<ViewerResponse> ViewerPost (@Body ViewerResponse workerResponse);
+}

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/events"
+        android:title="Мероприятия"
+        android:icon="@drawable/events"/>
+
+    <item
+        android:id="@+id/NewEvent"
+        android:title="Новое мероприятие"
+        android:icon="@drawable/newevent" />
+    <item
+        android:id="@+id/Invites"
+        android:title="Приглашения"
+        android:icon="@drawable/invites"/>
+
+    <item
+        android:id="@+id/EventOrganiztion"
+        android:title="Проведение"
+        android:icon="@drawable/uprav1"/>
+</menu>

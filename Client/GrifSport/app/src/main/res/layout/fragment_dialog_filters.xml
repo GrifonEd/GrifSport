@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".DialogFragmentFilters">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:minHeight="270dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_filters"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="Фильтры поиска"
+            android:id="@+id/titleApplication"
+            android:textColor="@color/purple_700"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            />
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:id="@+id/SportEdit"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="45dp"
+            android:drawableStart="@drawable/ic_person"
+            android:drawablePadding="10dp"
+            android:background="@drawable/shape_edittext01"
+            android:fontFamily="serif"
+            android:hint="Спорт"
+            android:textColorHint="@color/grey">
+
+        </TextView>
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:id="@+id/DisciplineEdit"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/SportEdit"
+            android:drawableStart="@drawable/ic_person"
+            android:visibility="gone"
+            android:drawablePadding="10dp"
+            android:background="@drawable/shape_edittext01"
+            android:fontFamily="serif"
+            android:hint="Дисциплина"
+            android:textColorHint="@color/grey">
+
+        </TextView>
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:id="@+id/AgeEdit"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="15dp"
+            android:drawableStart="@drawable/ic_person"
+            android:drawablePadding="10dp"
+            android:layout_below="@+id/DisciplineEdit"
+            android:background="@drawable/shape_edittext01"
+            android:fontFamily="serif"
+            android:hint="Возраст"
+            android:textColorHint="@color/grey">
+
+        </TextView>
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:id="@+id/GenderEdit"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="15dp"
+            android:drawableStart="@drawable/ic_person"
+            android:drawablePadding="10dp"
+            android:layout_below="@+id/AgeEdit"
+            android:background="@drawable/shape_edittext01"
+            android:fontFamily="serif"
+            android:hint="Пол"
+            android:textColorHint="@color/grey">
+        </TextView>
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:id="@+id/CityEdit"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="15dp"
+            android:drawableStart="@drawable/ic_person"
+            android:drawablePadding="10dp"
+            android:layout_below="@+id/GenderEdit"
+            android:background="@drawable/shape_edittext01"
+            android:fontFamily="serif"
+            android:hint="Город"
+            android:textColorHint="@color/grey">
+        </TextView>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/application_back"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:textSize="6sp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="10dp"
+            android:layout_alignLeft="@+id/CityEdit"
+            android:layout_below="@+id/CityEdit"
+            android:background="@drawable/mybutton"
+            android:text="Отмена" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/filterOk"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:textSize="6sp"
+            android:layout_marginTop="15dp"
+            android:layout_alignRight="@+id/CityEdit"
+            android:layout_below="@+id/CityEdit"
+            android:background="@drawable/mybutton"
+            android:text="Сохранить" />
+
+    </RelativeLayout>
+</FrameLayout>
